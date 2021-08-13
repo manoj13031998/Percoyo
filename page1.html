@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<img src="logo.jpg"  width="50" height="50"></img>
+
+<script>
+	var emailValidation=function() {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var email = document.getElementById("e").value;
+        
+        if (mailformat.value.match(email))
+          {
+            window.alert("Valid Format");
+        	return true;
+          }
+        else 
+        	{
+        	window.alert("Inavlid Format");
+        	return false;
+        	}
+    }
+
+    var phonenumber=function()
+    {
+     var phoneno = /^\d{10}$/;
+     var phone = document.getElementById("p").value;
+     if(phone.value.match(phoneno))
+          {
+             return true;
+          }
+     else
+          {
+            window.alert("Invalid Phone Number");
+            return false;
+          }
+   }
+   var display=function()
+   {
+    var name = document.getElementById("n").value;
+    var email = document.getElementById("e").value;
+    var phone = document.getElementById("p").value;
+    var descrip = document.getElementById("d").value;
+    document.alert(name,email,phone.descrip);
+   } 
+</script>
+
+</head>
+<body>
+    <hr>
+		<form onsubmit="return display()" >
+			<table align="right">
+				<tr>
+				<td>First Name</td>
+				<td><input type="text" name="fName"id="n"/></td>	
+				</tr>
+				<tr>			
+				<td>Email</td>
+				<td><input type="text" name="email"id="e"/></td>
+				<td></td>
+				</tr>
+                <tr>			
+                <td>Phone</td>
+                <td><input type="text" name="email"id="p"/></td>
+                <td></td>
+                </tr>
+                <tr>			
+                <td>Description</td>
+                <td><textarea id="d" name="description" rows="4" cols="50"></textarea></td>
+                <td></td>
+                </tr>
+				<tr>
+                <td>
+                </td>
+				<td><input type="submit" value="submit"/></td>
+				</tr>
+			</table>
+		</form>
+</body>
+</html>
